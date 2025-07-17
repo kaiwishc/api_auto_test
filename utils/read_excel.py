@@ -5,8 +5,11 @@
 @time: 2019/6/21 17:03
 @desc: 读取excel
 '''
+import os
+
 import xlrd
 from utils import get_file_path
+from pathlib import Path
 def read_excel():
     file_path = get_file_path.get_root_path()+'testdata\\testdata.xlsx'
     # 文件位置
@@ -34,7 +37,8 @@ def read_excel():
 
 def get_xls():
     cls = []
-    file_path = get_file_path.get_root_path() + 'testdata\\testdata.xlsx'
+    file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'testdata/testdata.xls')
+    print(file_path)
     # 文件位置
     excel_file = xlrd.open_workbook(file_path)
     sheet = excel_file.sheet_by_name('Sheet1')
