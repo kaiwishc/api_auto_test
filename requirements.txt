@@ -1,0 +1,6 @@
+allure-pytest==2.14.3
+pytest==8.4.1
+PyYAML==6.0.2
+requests==2.32.4
+selenium==4.34.2
+xlrd==2.0.2
